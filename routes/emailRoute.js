@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const nodemailer = require("nodemailer");
- require("dotenv").config(); 
+require("dotenv").config();
 
 // Send Email info
 router.post("/", (req, res) => {
@@ -41,7 +41,7 @@ router.post("/", (req, res) => {
       if (error) {
         console.log(error);
       } else {
-        res.send("Please check your emails");
+        res.json("Please check your emails");
       }
     });
   } catch (error) {
